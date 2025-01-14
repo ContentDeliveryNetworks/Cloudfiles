@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Checker</title>
+    <link rel="stylesheet" href="/Cloud/Main.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/Cloud/Ficons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Cloud/Ficons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Cloud/Ficons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Cloud/Ficons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Cloud/Ficons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Cloud/Ficons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Cloud/Ficons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Cloud/Ficons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Cloud/Ficons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/Cloud/Ficons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Cloud/Ficons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/Cloud/Ficons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Cloud/Ficons/favicon-16x16.png">
+    <link rel="manifest" href="/Cloud/Ficons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/Cloud/Ficons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        /* Reset and Base Styles */
+        body, h1, h2, h3, h4, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        .loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .result-screen {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007aff;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="6em" height="6em" viewBox="0 0 24 24">
+                <path fill="#1e90ff" d="M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21" opacity="0">
+                    <animate id="svgSpinnersWifiFade0" fill="freeze" attributeName="opacity" begin="0;svgSpinnersWifiFade1.end+0.2s" dur="0.25s" values="0;1" />
+                    <animate id="svgSpinnersWifiFade1" fill="freeze" attributeName="opacity" begin="svgSpinnersWifiFade3.end+0.5s" dur="0.1s" values="1;0" />
+                </path>
+                <path fill="#1e90ff" d="M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9Z" opacity="0">
+                    <animate id="svgSpinnersWifiFade2" fill="freeze" attributeName="opacity" begin="svgSpinnersWifiFade0.end" dur="0.25s" values="0;1" />
+                    <animate fill="freeze" attributeName="opacity" begin="svgSpinnersWifiFade3.end+0.5s" dur="0.1s" values="1;0" />
+                </path>
+                <path fill="#1e90ff" d="M12,3C7.95,3 4.21,4.34 1.2,6.6L3,9C5.5,7.12 8.62,6 12,6C15.38,6 18.5,7.12 21,9L22.8,6.6C19.79,4.34 16.05,3 12,3" opacity="0">
+                    <animate id="svgSpinnersWifiFade3" fill="freeze" attributeName="opacity" begin="svgSpinnersWifiFade2.end" dur="0.25s" values="0;1" />
+                    <animate fill="freeze" attributeName="opacity" begin="svgSpinnersWifiFade3.end+0.5s" dur="0.1s" values="1;0" />
+                </path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="result-screen" id="result-screen">
+        <h1 id="device-message"></h1>
+        <a href="/DownloadApp.html#download" class="button" id="go-back">Go Back</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadingScreen = document.querySelector(".loading-screen");
+            const resultScreen = document.getElementById("result-screen");
+            const deviceMessage = document.getElementById("device-message");
+            const goBackButton = document.getElementById("go-back");
+
+            setTimeout(() => {
+                const userAgent = navigator.userAgent;
+
+                // Check if the device is a Safari browser on macOS
+                if (userAgent.includes("Safari") && userAgent.includes("Macintosh")) {
+                    window.location.href = "https://callboy.neocities.org/Application/Welcome";
+                } else {
+                    loadingScreen.style.display = "none";
+                    resultScreen.style.display = "block";
+
+                    const deviceModel = userAgent.match(/\((.*?)\)/);
+                    deviceMessage.textContent = deviceModel ? `Device: ${deviceModel[1]}` : "Device: Unknown";
+                }
+            }, 5000);
+
+            goBackButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+</html>
