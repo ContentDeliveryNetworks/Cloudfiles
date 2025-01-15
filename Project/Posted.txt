@@ -1,0 +1,6 @@
+                <div class="job-list">
+                    <div class="job-item">
+                        <h4>XXXX</h4>
+                        <p>Location: XXX</p>
+                        <a href="#" class="button">Apply Now</a>
+                    </div>
