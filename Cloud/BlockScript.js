@@ -1,41 +1,50 @@
-   // Disable right-click context menu
-        document.addEventListener('contextmenu', function(event) {
+        // Disable right-click
+        document.addEventListener('contextmenu', (event) => {
             event.preventDefault();
         });
 
-        // Disable certain keyboard shortcuts
-        document.addEventListener('keydown', function(event) {
-            // Disable Ctrl + U (View Source)
-            if (event.ctrlKey && event.key === 'u') {
-                event.preventDefault();
-            }
-            // Disable Ctrl + S (Save Page)
-            if (event.ctrlKey && event.key === 's') {
-                event.preventDefault();
-            }
-            // Disable F12 (Developer Tools)
-            if (event.keyCode === 123) {
-                event.preventDefault();
-            }
-            // Disable Ctrl + C (Copy)
-            if (event.ctrlKey && event.key === 'c') {
-                event.preventDefault();
-            }
-            // Disable Ctrl + X (Cut)
-            if (event.ctrlKey && event.key === 'x') {
+        // Disable key combinations
+        document.addEventListener('keydown', (event) => {
+            const forbiddenKeys = ['u', 's', 'c', 'i', 'j']; // Forbidden keys for Ctrl+Key combinations
+            if (
+                (event.ctrlKey && forbiddenKeys.includes(event.key.toLowerCase())) ||
+                (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || // Ctrl+Shift+I
+                event.key === 'F12' // Developer tools key
+            ) {
                 event.preventDefault();
             }
         });
 
-        // Disable drag and drop
-        document.addEventListener('dragstart', function(event) {
-            event.preventDefault();
-        });
+        // Disable text selection, dragging, and copying
+        document.addEventListener('selectstart', (event) => event.preventDefault());
+        document.addEventListener('copy', (event) => event.preventDefault());
+        document.addEventListener('dragstart', (event) => event.preventDefault());
 
-        // Disable text selection on specific elements
-        const elements = document.querySelectorAll('h1, p');
-        elements.forEach(element => {
-            element.addEventListener('selectstart', function(event) {
-                event.preventDefault();
+        // Monitor for Developer Tools opening
+        (function monitorDevTools() {
+            const element = new Image();
+            Object.defineProperty(element, 'id', {
+                get: function () {
+                    window.location.href = 'about:blank'; // Redirect to blank if DevTools is detected
+                }
             });
-        });
+            console.log(element);
+            setTimeout(monitorDevTools, 1000); // Continuously check every second
+        })();
+
+        // Clear the console
+        console.clear();
+
+        // Disable viewing source via menu or shortcuts
+        setInterval(() => {
+            document.body.onkeydown = (event) => {
+                if (
+                    event.keyCode === 123 || // F12
+                    (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+                    (event.ctrlKey && event.keyCode === 85) // Ctrl+U
+                ) {
+                    event.preventDefault();
+                    return false;
+                }
+            };
+        }, 1000);
