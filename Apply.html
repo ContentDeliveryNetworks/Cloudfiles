@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="assets/js/Block.css">
+    <script src="assets/js/Block.js"></script>
+
+    <div class="overlay"></div>
+
+
+    
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, h4, p, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #E6E6FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Background */
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #E6E6FA	;
+            z-index: -1;
+        }
+
+        /* Terms Box */
+        .terms-box {
+            width: 80%;
+            max-width: 700px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        /* Terms Text */
+        .terms-text h2 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 10px;
+            text-align: center;
+            color:#ff6f61;
+            line-height: 1;
+            font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+        }
+
+        .terms-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: dodgerblue;
+            line-height: 1.8;
+            font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+        }
+
+        .terms-text h4 {
+            font-size: 18px;
+            margin: 20px 0 10px;
+            font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+        }
+
+        .terms-text h4 span {
+            color: red	;
+            font-weight: bold;
+            font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .red-btn {
+            background-color:dodgerblue;
+            color: #fff;
+        }
+
+        .red-btn:hover {
+            background-color: blue;
+        }
+
+        .gray-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .gray-btn:hover {
+            background-color: #ccc;
+        }
+
+        /* Modal Styling */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 20px;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal.show {
+            display: block;
+        }
+
+        .modal h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .modal p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<body>
+    <div class="bg"></div>
+    <div class="terms-box">
+        <div class="terms-text">
+            <h2>
+                <span>Registration Guidelines</span><br>________________<br>
+            </h2>
+            
+<p>Dear Registrant!,<br> here are all the guidelines on how you can start registration and complete a meeting, it is described in detail here, follow each guideline to complete your registration successfully, thank you.</p>
+
+
+
+<P><img src="/assets/Number/1.svg" width="20px" height="25px">Our service is only for adult users (18 years or older)</P>
+
+<P><img src="/assets/Number/2.svg" width="20px" height="25px">First of all, download our Android app and iOS app from our website, if you haven't done so,<a href="/HiManCloudApp.html" target="_blank">click here to download</a> or scroll down to the next page to download.</P>
+
+<P><img src="/assets/Number/3.svg" width="20px" height="25px">Open the file manager app on your phone and open the download folder. Go there and find the Hi Man app and install it. After installation, open it.</P>
+
+<P><img src="/assets/Number/4.svg" width="20px" height="25px">When you open the app, you will see the interface, login, registration, and guest or demo section. This is a basic idea of ​​what it will look like after logging in. If you have registered before, login here, otherwise click on the registration button.</P>
+
+
+<P><img src="/assets/Number/5.svg" width="20px" height="25px">Now you select your country, basically the country from which you want to complete the registration or from which you want to work.</P>
+
+
+<P><img src="/assets/Number/6.svg" width="20px" height="25px">A page will open in front of you where you can learn about various features, this is basically a package that you have to purchase at a specific price and if you have sufficient balance in your account, then you can click on Proceed to Next Step.</P>
+
+
+
+<P><img src="/assets/Number/7.svg" width="20px" height="25px">Here are all the rules, regulations, terms and conditions of our organization, etc. Please read each one carefully and try to understand and try to follow the rules and regulations when you are working with us and if you agree to our terms and conditions, then you can scroll down and click on the agree button.</P>
+
+
+
+<P><img src="/assets/Number/8.svg" width="20px" height="25px">Now you will be taken to a Telegram channel. Please install the Telegram app on your phone and create an account if you don't have one, and open the Telegram app. When you open it, you will be taken to a telegram group.</P>
+
+
+
+<P><img src="/assets/Number/9.svg" width="20px" height="25px">Look in our Telegram group, there is a link there, which is indicated by the name of   <b>𝐂𝐥𝐢𝐜𝐤 𝐡𝐞𝐫𝐞 𝐭𝐨 𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫</b>, click on it, so if you have many browsers on your phone, such as Google Chrome or Firefox, etc., choose one and open the link through it.</P>
+
+
+
+<P><img src="/assets/Number/10.svg" width="20px" height="25px">Now minimize browser and please <a href="https://t.me/iNDiTeam" target="_blank">💬💬Contact Customer care agents</a> quickly to get the account number as you will have to pay the registration fee. Click here to contact a customer care agent.</P>
+
+
+
+
+<P><img src="/assets/Number/11.svg" width="20px" height="25px">Follow all the instructions given by the customer care, the customer care agent will inform you as much as possible about how you need to pay the registration fee, and after the payment, keep a payment successful screenshot which you should give to the customer care agent and keep the screenshot with you as well.</P>
+
+
+
+
+<P><img src="/assets/Number/12.svg" width="20px" height="25px">Now you go back to your browser and open the link from Telegram, and here you can see a welcome message and there you are given some information and here it is said that if you want to register then you have to make a free payment which you have already done through the customer care agent.</P>
+
+
+
+<P><img src="/assets/Number/13.svg" width="20px" height="25px">Now put a check mark on the left side of I have money in my account, now another button will appear in front of you which says Proceed to the next step, and click on it.</P>
+
+
+
+<P><img src="/assets/Number/14.svg" width="20px" height="25px">You will see a page of personal information where you and your email address will be displayed. However, if you want to hide your privacy, you can use a fake number code name. However, in the case of email, you must try to provide the correct email because in the future, if there is any problem, the customer care agent will contact you through this email.</P>
+
+
+<P><img src="/assets/Number/15.svg" width="20px" height="25px">Now on the communication page, enter your phone number so we can call you, and in the second box, enter the number you registered your Telegram with, and in the third box, enter your personal WhatsApp number that will only be available to us, and click on Proceed to the Next Step again.</P>
+
+
+
+<P><img src="/assets/Number/16.svg" width="20px" height="25px">In the address section, enter your year of birth in the first box, the name of the city you wish to serve in the second box, and the division of your city in the third box.</P>
+
+
+
+<P><img src="/assets/Number/17.svg" width="20px" height="25px">You are almost done with the registration. Now you will be asked which payment app you want to make the payment through and which one you have already completed the payment with. Please select the one with which you have already completed the payment, and click on Proceed to the Next Step again.</P>
+
+
+
+<P><img src="/assets/Number/18.svg" width="20px" height="25px">In the Proof of Payment section, upload the payment successful screenshot that you took when you made the payment here and wait for a while until the screenshot is uploaded and finally click on Process to the Next Step.</P>
+
+
+
+<P><img src="/assets/Number/19.svg" width="20px" height="25px">Now confirm human verification by clicking on the Are you a robot box and follow the next instructions and once it is verified click on the Complete Registration button.</P>
+
+
+
+<P><img src="/assets/Number/20.svg" width="20px" height="25px">Great job, now you have a successful message, please wait for a while, the customer care agent will provide you with a user ID and password on Telegram and email, through which you can login to the app and you can provide services in your specific area, for any further information, please contact the customer care agent, thank you, have a good day</P>
+
+
+
+
+
+
+
+<center><P><a href="https://t.me/iNDiTeam" target="_blank">💬💬Contact Customer care agents</a> </P></center>
+
+
+
+
+
+            <div class="buttons">
+                <button class="btn red-btn" id="accept-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 176v-40a40 40 0 0 1 40-40h208a40 40 0 0 1 40 40v240a40 40 0 0 1-40 40H216a40 40 0 0 1-40-40v-40"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m272 336l80-80l-80-80M48 256h288"/></svg> Understood & apply</button>
+              <br>
+                <button class="btn gray-btn" id="decline-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 32 32"><path fill="#f92f60" d="M24.879 2.879A3 3 0 1 1 29.12 7.12l-8.79 8.79a.125.125 0 0 0 0 .177l8.79 8.79a3 3 0 1 1-4.242 4.243l-8.79-8.79a.125.125 0 0 0-.177 0l-8.79 8.79a3 3 0 1 1-4.243-4.242l8.79-8.79a.125.125 0 0 0 0-.177l-8.79-8.79A3 3 0 0 1 7.12 2.878l8.79 8.79a.125.125 0 0 0 .177 0z"/></svg> not intrested</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:visited {
+          color: red;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        a:active {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        </style>
+    <!-- Custom Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="custom-modal">
+        <h3 id="modal-title">Alert</h3>
+        <p id="modal-message">Message goes here...</p>
+        <div class="modal-buttons" id="modal-buttons">
+            <button class="btn red-btn" id="modal-confirm">No,Thanks </button>
+            <button class="btn gray-btn" id="modal-cancel">Yes, Please </button>
+        </div>
+    </div>
+
+    <script>
+        const acceptBtn = document.getElementById('accept-btn');
+        const declineBtn = document.getElementById('decline-btn');
+        const modal = document.getElementById('custom-modal');
+        const overlay = document.getElementById('overlay');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalButtons = document.getElementById('modal-buttons');
+        const modalConfirm = document.getElementById('modal-confirm');
+        const modalCancel = document.getElementById('modal-cancel');
+
+        function showModal(title, message, showButtons = true) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modalButtons.style.display = showButtons ? 'flex' : 'none';
+            modal.classList.add('show');
+            overlay.classList.add('show');
+        }
+
+        function hideModal() {
+            modal.classList.remove('show');
+            overlay.classList.remove('show');
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            showModal('Congratulations', 'Awesome, please wait a moment, you are being taken to the app download page very quickly.', false);
+            setTimeout(() => {
+                window.location.href = '/HiManCloudApp.html';
+            }, 2000);
+        });
+
+        declineBtn.addEventListener('click', () => {
+            showModal('Are you sure?', 'You dont want to register as a call boy!', true);
+        });
+
+        modalConfirm.addEventListener('click', () => {
+            window.location.href = '/index.html';
+        });
+
+        modalCancel.addEventListener('click', () => {
+            hideModal();
+        });
+
+        overlay.addEventListener('click', hideModal);
+    </script>
+</body>
+
+</html>
