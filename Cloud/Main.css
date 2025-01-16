@@ -112,8 +112,10 @@ tr:hover {
 }
 .job-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit));
-    gap: 1.5rem;
+  grid-template-columns: auto auto auto auto;
+  gap: 5px;
+   background-color: #f9f9f9;
+  padding: 5px;
 }
 .job-item {
   display: grid;
@@ -122,13 +124,6 @@ tr:hover {
    background-color: #f9f9f9;
   padding: 5px;
 
-}
-.job-item > div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
 }
 .job-item h3 {
     font-size: 1.2rem;
