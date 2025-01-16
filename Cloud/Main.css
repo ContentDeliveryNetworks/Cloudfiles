@@ -123,6 +123,13 @@ tr:hover {
   padding: 5px;
 
 }
+.job-item > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 .job-item h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
