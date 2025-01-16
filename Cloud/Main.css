@@ -37,6 +37,8 @@ html {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-left: 2px; /* Added gap on the left */
+    margin-right: 2px; /* Added gap on the right */
 }
 .nav ul li a {
     color: #fff;
@@ -100,7 +102,7 @@ tr:hover {
     background-color: #eaf4ff;
 }
 
-
+/* Featured Jobs Section */
 .featured-jobs {
     padding: 2rem 0;
     background-color: #fff;
@@ -166,7 +168,6 @@ tr:hover {
     background-color: #005bb5;
 }
 
-
 /* Job Details Section */
 .job-details {
     max-width: 800px;
@@ -216,6 +217,15 @@ tr:hover {
 }
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* Style for Links with target="_blank" */
+a[target="_blank"] {
+    color: inherit; /* Matches the parent text color */
+    text-decoration: none; /* Removes underline */
+}
+a[target="_blank"]:hover {
+    text-decoration: underline; /* Adds underline on hover */
 }
 
 /* Media Query for Smaller Screens */
