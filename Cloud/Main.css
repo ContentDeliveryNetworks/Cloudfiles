@@ -100,9 +100,14 @@ tr:hover {
     background-color: #eaf4ff;
 }
 
+
 .featured-jobs {
     padding: 2rem 0;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .featured-jobs h3 {
@@ -115,6 +120,7 @@ tr:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -159,6 +165,7 @@ tr:hover {
 .job-item .button:hover {
     background-color: #005bb5;
 }
+
 
 /* Job Details Section */
 .job-details {
