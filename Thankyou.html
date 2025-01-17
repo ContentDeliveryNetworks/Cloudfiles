@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/Cloud/Ficons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Cloud/Ficons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Cloud/Ficons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Cloud/Ficons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Cloud/Ficons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Cloud/Ficons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Cloud/Ficons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Cloud/Ficons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Cloud/Ficons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/Cloud/Ficons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Cloud/Ficons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/Cloud/Ficons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Cloud/Ficons/favicon-16x16.png">
+    <link rel="manifest" href="/Cloud/Ficons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/Cloud/Ficons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+      <link rel="stylesheet" href="https://naukriagigolocallboy.pages.dev/Cloud/Block.css">
+<script src="https://naukriagigolocallboy.pages.dev/Cloud/BlockScript.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FFCC80, #FFAB91, #B39DDB);
+            overflow: hidden;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            color: #ffffff;
+            animation: fadeIn 2s ease-in-out;
+            padding: 20px;
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ff9a9e;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #FF8A65, 0 0 15px #BA68C8; }
+            100% { text-shadow: 0 0 20px #ffffff, 0 0 30px #FF8A65, 0 0 40px #BA68C8; }
+        }
+
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #FF80AB;
+            clip-path: polygon(50% 0%, 61% 20%, 75% 25%, 89% 20%, 100% 34%, 82% 74%, 50% 100%, 18% 74%, 0% 34%, 11% 20%, 25% 25%, 39% 20%);
+            animation: float 6s infinite ease-in-out, move 6s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        .heart:nth-child(odd) {
+            background-color: #FFAB91;
+        }
+
+        .heart:nth-child(even) {
+            background-color: #B39DDB;
+        }
+
+        @keyframes float {
+            0% { transform: scale(1) translateY(100%); opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { transform: scale(1.5) translateY(-10%); opacity: 0; }
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            .button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            .heart {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+            .heart {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Success!</h1>
+        <p>Please wait We will Contact you</p>
+        <a href="https://t.me/iNDiTeam" class="button">Contact Customer care agents</a>
+    </div>
+    <div class="floating-hearts">
+        <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="heart" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="heart" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="heart" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="heart" style="left: 80%; animation-delay: 7s;"></div>
+        <div class="heart" style="left: 90%; animation-delay: 8s;"></div>
+    </div>
+</body>
+</html>
