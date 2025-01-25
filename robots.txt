@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: 
 Sitemap: https://naukria.neocities.org/sitemap.xml
+Sitemap: https://naukria.neocities.org/sitemap1.xml
