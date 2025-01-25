@@ -250,4 +250,41 @@ a[target="_blank"]:hover {
         font-size: 0.9rem;
         padding: 0.6rem 1.5rem;
     }
+    /* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
 }
+
+.pagination a {
+    text-decoration: none;
+    color: #007aff;
+    border: 1px solid #007aff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: #007aff;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+}
+
+.pagination a.prev,
+.pagination a.next {
+    font-weight: bold;
+}
+
+}
+
