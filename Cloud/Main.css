@@ -250,11 +250,13 @@ a[target="_blank"]:hover {
         font-size: 0.9rem;
         padding: 0.6rem 1.5rem;
     }
-    /* Pagination Styles */
+    }
+/* Pagination Styles */
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     gap: 10px;
     margin: 20px 0;
 }
@@ -267,6 +269,7 @@ a[target="_blank"]:hover {
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Ensures consistent sizing */
 }
 
 .pagination a:hover {
@@ -286,5 +289,21 @@ a[target="_blank"]:hover {
     font-weight: bold;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .pagination a {
+        padding: 8px 12px; /* Reduce padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination a {
+        padding: 6px 10px; /* Further reduce padding for very small screens */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+    .pagination {
+        gap: 5px; /* Reduce gap between items */
+    }
 }
 
